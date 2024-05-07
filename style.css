@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+#sky {
+    overflow: hidden;
+    background: #FFDAB9; /* had color #C6D9E8 */
+    background: -webkit-linear-gradient(top, #E9967A 0%, #fff 100%);
+    background: -linear-gradient(top, #FFDAB9 0%, #fff 100%);
+    background: -moz-linear-gradient(top, #E9967A 0%, #fff 100%);
+    height: 400px; 
+}
+
+.cloud {
+    position: absolute;
+    background-image: url('https://www.dl.dropboxusercontent.com/s/31ivp5fsjcgytgp/cloud1.png');
+    background-repeat: no-repeat;
+    width: 176px;
+    height: 114px;
+}
+
+
+#cloud1 {
+    top: 40px;
+    left: 400px;
+    -webkit-animation: movingclouds 10s linear infinite;
+    -moz-animation: movingclouds 10s linear infinite;
+    -o-animation: movingclouds 10s linear infinite;
+}
+
+#cloud2 {
+    top: 10px;
+    left: 600px;
+    -webkit-animation: movingclouds 10s linear infinite;
+    -moz-animation: movingclouds 10s linear infinite;
+    -o-animation: movingclouds 10s linear infinite;
+}
+
+#cloud3 {
+    top: 100px;
+    left: 100px;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0.9;
+    -webkit-animation: movingclouds 15s linear infinite;
+    -moz-animation: movingclouds 15s linear infinite;
+    -o-animation: movingclouds 15s linear infinite;
+}
+
+#cloud4 {
+    top: -20px;
+    left: 40px;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.8;
+    -webkit-animation: movingclouds 20s linear infinite;
+    -moz-animation: movingclouds 20s linear infinite;
+    -o-animation: movingclouds 20s linear infinite;
+}
+
+#cloud5 {
+    top: 100px;
+    left: 500px;
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    opacity: 0.7; 
+    -webkit-animation: movingclouds 25s linear infinite;
+    -moz-animation: movingclouds 25s linear infinite;
+    -o-animation: movingclouds 25s linear infinite;
+}
+
+#cloud6 {
+    top: 20px;
+    left: 200px;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0.5; 
+    -webkit-animation: movingclouds 27s linear infinite;
+    -moz-animation: movingclouds 27s linear infinite;
+    -o-animation: movingclouds 27s linear infinite;
+}
+
+#cloud7 {
+    top: 92px;
+    left: 700px;
+    -webkit-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    -ms-transform: scale(0.4);
+    transform: scale(0.4);
+    opacity: 0.4; 
+    -webkit-animation: movingclouds 29s linear infinite;
+    -moz-animation: movingclouds 29s linear infinite;
+    -o-animation: movingclouds 29s linear infinite;
+}
+
+@keyframes movingclouds {
+    0% {margin-left: 100%;}
+    100% {margin-left: -150%;}
+}
+
+@-webkit-keyframes movingclouds {
+    0% {margin-left: 100%;}
+    100% {margin-left: -150%;}
+}
+
+@-moz-keyframes movingclouds {
+    0% {margin-left: 100%;}
+    100% {margin-left: -150%;}
+}
+
+/* Nav bars */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 40px;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
+/* Hero section */
+#hero {
+    background: #sky; /* other wise background-image: url(); */
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+}
+
+#hero::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: darksalmon;
+}
+
+/* may need to change this so it goes to the left */
+#hero .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+
+}
+#hero h1 {
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 5s ease forwards;
+    animation-delay: 1ss;
+}
+
+#hero h1:nth-child(1) {
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(2) {
+    animation-delay: 2s;
+}
+
+#hero h1:nth-child(3) {
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+  
+}
+
+#hero h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: gray;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .3s;
+}
+
+#hero h1:nth-child(1) span {
+    animation-delay: .5s;
+}
+
+#hero h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+#hero h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+#hero .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: gray;
+    background-color: transparent;
+    border: 2px solid gray;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+#hero .cta:hover {
+    color: darksalmon;
+    background-color: gray;
+}
+/* end of hero sec */
+
+
+/* keyframes */
+@keyframes text_reveal_box {
+    50%{
+    width: 100%;
+    left:0;
+}
+100%{
+    width:0;
+    left: 100%;
+}
+}
+
+@keyframes text_reveal {
+    100%{
+        color: black;
+    }
+}
+
+@keyframes text_reveal_name {
+    100%{
+        color:darkgoldenrod;
+        font-weight: 50px;
+    }
+}
+/* end of keyframes */
+
+
+/*--------------------css for small screens----------- */
+@media only screen and(max-width: 600px) {
+   .header-text{
+    margin-top: 100%;
+    font-size: 16px;
+   }
+    .header-text h1{
+    font-size: 30px;
+   }
+}

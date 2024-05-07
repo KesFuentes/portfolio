@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>About Me</title>
+        <script src="https://kit.fontawesome.com/a75082fdfa.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+      
+       
+            <div id="about">
+                <div class = "container">
+                    <div class = "row">
+                        <div class="about-col-1">
+                            <img src="C:\Users\kesma\OneDrive\Desktop\myPortfolio\yellow.jpg" class="logo">
+                        </div>
+                        <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>
+                            Junior Computer Science student at Penn State Harrisburg that loves prolem-solving, learning new things, and staring at my computer. <br>
+                            <br> <b>Hobbies:</b>
+                            <br> <i class="fa-solid fa-sun-plant-wilt"></i> Gardening
+                            <br> Trail Walks
+                            <br> Dad jokes
+                        </p>
+                            
+
+                        <div class="tab-titles"> 
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Languages</span><br>C++, JavaScript, Java, HTLM/CSS, SQL, TypeScript</li>
+                                <li><span>IDEs</span><br>Visual Studio, Eclipse, Sublime Text, Intellij </li>
+                                <li><span>Microsoft Apps</span><br>Excel, Forms, Power Automate, Power Bi  </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Game</span><br>TypeScript Game Development</li>
+                                <li><span>Web Development</span><br>Web app Development</li>
+                                <li><span>Database</span><br>Database design </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>University:</span><br>The Pennsylvania State University</li>
+                                <li><span>Expected Graduation:</span><br>Spring 2025</li>
+                                <li><span>Major:</span><br>BS in Computer Science <br> Minor in Mathematics </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+            
+                 
+        
+        <style>
+          
+            
+           /* p {
+                text-align: right;
+                color:black;
+                font-size: 50px;
+                font-family: Arial, Helvetica, sans-serif;
+            }  */
+
+            /*.logo{
+                width: 240px;
+                height: 240px;
+                border-radius: 50%;
+            } */
+
+            #about{
+                padding: 80px 0;
+                color: #000000;
+                font-size: 25px;
+            }
+
+            .row{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .about-col-1{
+                flex-basis: 35%;
+            }
+
+            .about-col-1 img{
+                width: 100%;
+                border-radius: 50%;
+            }
+
+            .about-col-2{
+                flex-basis: 60%;  
+            }
+
+            .sub-title {
+                font-size: 60px;
+                font-weight: 600;
+                color: black;
+            }
+
+            .tab-titles {
+                display: flex;
+                margin: 20px 0 40px;
+            }
+
+            .tab-links {
+                margin-right: 50px;
+                font-size: 18px;
+                font-weight: 500;
+                cursor: pointer;
+                position: relative;
+            }
+
+            .tab-links::after {
+                content: '';
+                width: 0;
+                height: 3px;
+                background: salmon;
+                position: absolute;
+                left: 0;
+                bottom: -8px;
+                transition: 0.5s;
+            }
+
+            .tab-links.active-link::after {
+                width: 50%;
+            }
+
+            .tab-contents ul li {
+                list-style: none;
+                margin: 10px 0;
+            }
+
+            .tab-contents ul li span {
+                color: salmon;
+                font-size: 14px;
+            }
+
+            .tab-contents {
+                display: none;
+            }
+
+            .tab-contents.active-tab {
+                display: block;
+            }
+
+/*--------------------css for small screens----------- */
+@media only screen and(max-width: 600px) {
+   .header-text{
+    margin-top: 100%;
+    font-size: 16px;
+   }
+    .header-text h1{
+    font-size: 30px;
+   }
+
+   .sub-title{
+    font-size: 40px;
+   }
+
+   .about-col-1, .about-col-2 {
+    flex-basis: 100%
+   }
+
+   .about-col-1 {
+    margin-bottom: 30px;
+   }
+
+   .about-col2{
+    font-size: 14px;
+   }
+
+   .tab.links{
+    font-size: 16px;
+    margin-right: 20px;
+   }
+
+   .contact-left, .contact-right{
+    flex-basis: 100%;
+   }
+}
+            
+        </style>
+
+            <script>
+
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+                function opentab(tabname) {
+                    for(tablink of tablinks){
+                        tablink.classList.remove("active-link");
+                    }
+                    for(tabcontent of tabcontents){
+                        tabcontent.classList.remove("active-tab");
+                    }
+                    event.currentTarget.classList.add("active-link");
+                    document.getElementById(tabname).classList.add("active-tab");
+                }
+            </script>    
+    
+
+    </body>
+
+</html>

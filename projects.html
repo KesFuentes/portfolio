@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Projects</title>
+        <script src="https://kit.fontawesome.com/a75082fdfa.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+       
+        <div id="portfolio">
+            <div class="container">
+                <h1>My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="C:\Users\kesma\OneDrive\Desktop\myPortfolio\kirb.png">
+                        <div class="layer">
+                            <h3><b>Kirby Like Game</b></h3>
+                            <p>Kirby clone game; developed using TypeScript <br>and Kaboom.js</p>
+                            
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="C:\Users\kesma\OneDrive\Desktop\myPortfolio\sampleoutput.png">
+                        <div class="layer">
+                            <h3><b>Insurance Software System</b></h3>
+                            <p>Implemented software system for managing<br> insurance policies for an insurance company, 
+                                <br>facilitating customer applications, policy <br>management, and staff operations, 
+                                <br>utilizing an Oracle database</p>
+                                <p>Application Features:</p>
+                                <p>*Add, edit, and remove a customer<br>
+                                    *Browse the list of the customers<br>
+                                    *Add, edit, and remove a policy for a customer<br>
+                                    *Browse the list of policies
+                                    </p>
+                            
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="C:\Users\kesma\OneDrive\Desktop\myPortfolio\portfolioPic.png">
+                        <div class="layer">
+                            <h3><b>Portfolio</b></h3>
+                            <p>Web development portfolio; developed <br>using HTML and CSS</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn"> Go to Top</a>
+            </div>
+        </div>
+
+
+        <style>
+            
+
+            #portfolio{
+                padding: 50px 0;
+            }
+
+            .work-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                grid-gap: 40px;
+                margin-top: 50px;
+            }
+
+            .work {
+                border-radius: 10px;
+                position: relative;
+                overflow: hidden;
+            }
+
+
+            .work img {
+                width: 100%;
+                border-radius: 10px;
+                display: block;
+                transition: transform 0.5s;
+            }
+
+            .layer{
+                width: 100%;
+                height: 0;
+                background: linear-gradient(white, antiquewhite); /*rgba(0,0,0,0.6)*/
+                border-radius: 10px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 0 40px;
+                text-align: center;
+                font-size: 20px;
+                transition: height 0.5s;
+            }
+
+            .layer h3 {
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+         /*   .layer a {
+                margin-top: 20px;
+                color: black;
+                text-decoration: none;
+                font-size: 18px;
+                line-height: 60px;
+                background: #fff;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                text-align: center;
+
+            } */  /*Link icon is not working*/
+
+            .work:hover img {
+                transform: scale(1.1);
+            }
+
+            .work:hover .layer {
+                height: 100%;
+            }
+
+            .btn {
+                display: block;
+                margin: 50px auto;
+                width: fit-content;
+                border: 1px solid black;
+                padding: 14px 50px;
+                border-radius: 6px;
+                text-decoration: none;
+                color: black;
+                transition: background 0.5s;
+            }
+
+            .btn:hover {
+                background: #d68029;
+            }
+
+/*--------------------css for small screens----------- */
+@media only screen and(max-width: 600px) {
+   .header-text{
+    margin-top: 100%;
+    font-size: 16px;
+   }
+    .header-text h1{
+    font-size: 30px;
+   }
+
+   .sub-title{
+    font-size: 40px;
+   }
+
+   .about-col-1, .about-col-2 {
+    flex-basis: 100%
+   }
+
+   .about-col-1 {
+    margin-bottom: 30px;
+   }
+
+   .about-col2{
+    font-size: 14px;
+   }
+
+   .tab.links{
+    font-size: 16px;
+    margin-right: 20px;
+   }
+
+   .contact-left, .contact-right{
+    flex-basis: 100%;
+   }
+}
+
+
+           
+
+        </style>
+    </body>
+
+</html>
